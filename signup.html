@@ -5,11 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Meet-Up Event Planner</title>
+    <title>SignUp Meet-Up Event Planner</title>
 
     <!-- Bootstrap -->
-    <link href="../css/bootstrap.min.css" rel="stylesheet">
-    <link href="../css/main.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -25,7 +25,8 @@
             <form action="index.html" method="post">
                 <div class="row">
                     <div class="col-xs-12 text-center">
-                        <h3>Sign Up <small>Meet-Up Event Planner</small></h3>
+                        <h3>Sign Up <small>Meet-Up Event Planner</small>
+                        </h3>
                     </div>
                 </div>
                 <hr/>
@@ -69,7 +70,7 @@
                     <div class="col-sm-6">
                         <div class="form-group">
                             <label class="control-label" for="organization-title">Job Title</label>
-                            <input class="form-control" type="text" id="organization-title" autocomplete="organization-title" placeholder="Software Engineer" />
+                            <input class="form-control" type="text" id="organization-title" autocomplete="organization-title" placeholder="Software Engineer"/>
                         </div>
                     </div>
                 </div>
@@ -83,28 +84,42 @@
                     <div class="col-sm-6">
                         <div class="form-group">
                             <label class="control-label" for="tel">Phone Number</label>
-                            <input class="form-control" type="tel" id="tel" autocomplete="tel" placeholder="2599 1047" />
+                            <input class="form-control" type="tel" id="tel" autocomplete="tel" placeholder="2599 1047"/>
                         </div>
                     </div>
                 </div>
 
                 <div class="row padding-bottom">
                     <div class="col-xs-12 text-center">
-                        <a class="btn btn-lg btn-primary">Sign Up!</a>
+                        <button id="submitSignUp" type="submit" href="signup.html" class="btn btn-lg btn-primary">Sign Up!</button>
                     </div>
                 </div>
-                <hr/>
-                <p> <small><span class="color-crimson">*</span> Indicates a required field.</small></p>
-                <div class="clearfix"></div>
             </form>
+            <hr />
+            <p>
+                <small><span class="color-crimson">*</span> Indicates a required field.</small>
+            </p>
+            <p><small>Already have an account? <a href="index.html">Sign In</a></small></p>
+            <div class="clearfix"></div>
         </div>
       </div>
 
     </div>
 
+      <script src="https://www.gstatic.com/firebasejs/live/3.0/firebase.js"></script>
+      <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyD7obYQibEcGcNu7W7RE9BT4ymHg0NZOxc",
+        authDomain: "meet-up-7f6be.firebaseapp.com",
+        databaseURL: "https://meet-up-7f6be.firebaseio.com",
+        storageBucket: "",
+      };
+      firebase.initializeApp(config);
+      </script>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="js/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="../js/bootstrap.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
   </body>
 </html>
