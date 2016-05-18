@@ -1,2 +1,42 @@
-margin-top {
+﻿body {
+  background-color: #F5F5F5; }
+
+.sign-up-wrapper {
+  background-color: #fff;
+  border: #C5C5C5 1px solid;
+  border-radius: 5px; }
+
+.color-crimson {
+  color: crimson; }
+
+.margin-top {
   margin-top: 20px; }
+
+.margin-top-2x {
+  margin-top: 40px; }
+
+.margin-top-3x {
+  margin-top: 60px; }
+
+.padding-top {
+  padding-top: 20px; }
+
+.padding-top-2x {
+  padding-top: 40px; }
+
+.padding-top-3x {
+  padding-top: 60px; }
+
+.padding-bottom {
+  padding-bottom: 20px; }
+
+.padding-bottom-2x {
+  padding-bottom: 40px; }
+
+.padding-bottom-3x {
+  padding-bottom: 60px; }
+
+.form-group.required .control-label:after {
+  content: " *";
+  color: crimson; }
+

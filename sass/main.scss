@@ -1,3 +1,56 @@
-margin-top{
-  margin-top: 20px;
+$x: 20px;
+
+body {
+    background-color: #F5F5F5;
+}
+
+.sign-up-wrapper{
+    background-color: #fff;
+    border: #C5C5C5 1px solid;
+    border-radius: 5px;
+}
+
+.color-crimson{
+    color: crimson;
+}
+
+.margin-top{
+    margin-top: $x;
+}
+
+.margin-top-2x{
+    margin-top: 2 * $x;
+}
+
+.margin-top-3x{
+    margin-top: 3 * $x;
+}
+
+.padding-top{
+    padding-top: $x;
+}
+
+.padding-top-2x{
+    padding-top: 2 * $x;
+}
+
+.padding-top-3x{
+    padding-top: 3 * $x;
+}
+
+.padding-bottom{
+    padding-bottom: $x;
+}
+
+.padding-bottom-2x{
+    padding-bottom: 2 * $x;
+}
+
+.padding-bottom-3x{
+    padding-bottom: 3 * $x;
+}
+
+.form-group.required .control-label:after {
+    content: " *";
+    color: crimson;
 }
