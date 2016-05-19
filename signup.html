@@ -9,6 +9,7 @@
 
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/animate.css" rel="stylesheet">
     <link href="css/main.css" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -22,7 +23,7 @@
     <div class="container">
       <div class="row">
         <div class="col-xs-12 col-sm-offset-2 col-sm-8 col-md-offset-3 col-md-6 sign-up-wrapper margin-top-3x padding-top">
-            <form action="index.html" method="post">
+            <form id="sigup-form" action="#">
                 <div class="row">
                     <div class="col-xs-12 text-center">
                         <h3>Sign Up <small>Meet-Up Event Planner</small>
@@ -34,13 +35,13 @@
                     <div class="col-sm-6">
                         <div class="form-group required">
                             <label class="control-label" for="fname">First Name</label>
-                            <input class="form-control" type="text" id="fname" autocomplete="given-name" placeholder="John" autofocus required/>
+                            <input class="form-control" type="text" id="fname" name="first-name" autocomplete="given-name" placeholder="John" autofocus required/>
                         </div>
                     </div>
                     <div class="col-sm-6">
                         <div class="form-group required">
                             <label class="control-label" for="lname">Last Name</label>
-                            <input class="form-control" type="text" id="lname" autocomplete="family-name" placeholder="Doe" required/>
+                            <input class="form-control" type="text" id="lname" name="last-name" autocomplete="family-name" placeholder="Doe" required/>
                         </div>
                     </div>
                 </div>
@@ -48,7 +49,7 @@
                     <div class="col-sm-12">
                         <div class="form-group required">
                             <label class="control-label" for="email">Email</label>
-                            <input class="form-control" type="email" id="email" autocomplete="email" placeholder="john.doe@mail.com" required/>
+                            <input class="form-control" type="email" id="email" name="email" autocomplete="email" placeholder="john.doe@mail.com" required/>
                         </div>
                     </div>
                 </div>
@@ -56,7 +57,7 @@
                     <div class="col-sm-12">
                         <div class="form-group required">
                             <label class="control-label" for="password">Password</label>
-                            <input class="form-control" type="password" id="password" autocomplete="new-password" placeholder="********" required/>
+                            <input class="form-control" type="password" id="password" name="password" autocomplete="new-password" placeholder="********" required/>
                         </div>
                     </div>
                 </div>
@@ -64,13 +65,13 @@
                     <div class="col-sm-6">
                         <div class="form-group">
                             <label class="control-label" for="organization">Employer</label>
-                            <input class="form-control" type="text" id="organization" autocomplete="organization" placeholder="Apple Inc."/>
+                            <input class="form-control" type="text" id="organization" name="organization" autocomplete="organization" placeholder="Apple Inc."/>
                         </div>
                     </div>
                     <div class="col-sm-6">
                         <div class="form-group">
                             <label class="control-label" for="organization-title">Job Title</label>
-                            <input class="form-control" type="text" id="organization-title" autocomplete="organization-title" placeholder="Software Engineer"/>
+                            <input class="form-control" type="text" id="organization-title" name="job-title" autocomplete="organization-title" placeholder="Software Engineer"/>
                         </div>
                     </div>
                 </div>
@@ -78,13 +79,13 @@
                     <div class="col-sm-6">
                         <div class="form-group">
                             <label class="control-label" for="bday">Birthday</label>
-                            <input class="form-control" type="date" id="bday" autocomplete="bday"/>
+                            <input class="form-control" type="date" id="bday" name="Birthday" autocomplete="bday"/>
                         </div>
                     </div>
                     <div class="col-sm-6">
                         <div class="form-group">
                             <label class="control-label" for="tel">Phone Number</label>
-                            <input class="form-control" type="tel" id="tel" autocomplete="tel" placeholder="2599 1047"/>
+                            <input class="form-control" type="tel" id="tel" name="phone" autocomplete="tel" placeholder="2599 1047"/>
                         </div>
                     </div>
                 </div>
@@ -121,5 +122,8 @@
     <script src="js/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap-notify.js"></script>
+    <script src="js/main.js"></script>
+
   </body>
 </html>

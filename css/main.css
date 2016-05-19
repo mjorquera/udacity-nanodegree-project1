@@ -1,4 +1,4 @@
-﻿body {
+body {
   background-color: #F5F5F5; }
 
 .sign-up-wrapper {
@@ -39,4 +39,3 @@
 .form-group.required .control-label:after {
   content: " *";
   color: crimson; }
-
