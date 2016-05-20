@@ -54,3 +54,23 @@ body {
     content: " *";
     color: crimson;
 }
+
+.pass-success{
+    color: #50AB51;
+    list-style: none;
+    left: -15px;
+    position: relative;
+    font-weight: bold;
+}
+
+.pass-success:before{
+    position: relative;
+    top: 1px;
+    display: inline-block;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1;
+    font-family: "Glyphicons Halflings";
+    content: "\e089";
+    left: -5px;
+}
