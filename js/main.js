@@ -1,20 +1,8 @@
 $(document).ready(function() {
 
-  var firstPasswordInput = document.querySelector('#password');
-  var secondPasswordInput = document.querySelector('#password2');
-  var submit = document.querySelector('#submitSignUp');
-
-
-
-  $("#password").popover({
-        placement: "bottom",
-        content: "It's so simple to create a tooltop for my website!" })
-        .on("click focus",function(){
-            $(this).popover('show');
-        })
-        .blur(function () {
-            $(this).popover('hide');
-        });
+  var firstPasswordInput = document.querySelector("#password");
+  var secondPasswordInput = document.querySelector("#password2");
+  var submit = document.querySelector("#submitSignUp");
 
   function notifySuccess(){
     $.notify(
@@ -58,10 +46,6 @@ $(document).ready(function() {
         firstInputIssuesTracker.add("greater than 100 characters");
       }
 
-      if (!firstPassword.match(/[\!\@\#\$\%\^\&\*]/g)) {
-        firstInputIssuesTracker.add("missing a symbol (!, @, #, $, %, ^, &, *)");
-      }
-
       if (!firstPassword.match(/\d/g)) {
         firstInputIssuesTracker.add("missing a number");
       }
@@ -72,13 +56,6 @@ $(document).ready(function() {
 
       if (!firstPassword.match(/[A-Z]/g)) {
         firstInputIssuesTracker.add("missing an uppercase letter");
-      }
-
-      var illegalCharacterGroup = firstPassword.match(/[^A-z0-9\!\@\#\$\%\^\&\*]/g)
-      if (illegalCharacterGroup) {
-        illegalCharacterGroup.forEach(function (illegalChar) {
-          firstInputIssuesTracker.add("includes illegal character: " + illegalChar);
-        });
       }
     };
 
