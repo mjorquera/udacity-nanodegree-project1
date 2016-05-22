@@ -31,6 +31,53 @@ $(document).ready(function() {
         return indexed_array;
       }
 
+  $("#password").on("keyup", function(){
+
+    if ($(this).val().length >= 8) {
+      $("#pass-req1").addClass("pass-success");
+    }
+    else {
+      $("#pass-req1").removeClass("pass-success");
+    }
+
+    if($(this).val().match(/\d/g)){
+      $("#pass-req2").addClass("pass-success");
+    }
+    else {
+      $("#pass-req2").removeClass("pass-success");
+    }
+
+    if($(this).val().match(/[a-z]/g)){
+      $("#pass-req3").addClass("pass-success");
+    }
+    else {
+      $("#pass-req3").removeClass("pass-success");
+    }
+
+    if($(this).val().match(/[A-Z]/g)){
+      $("#pass-req4").addClass("pass-success");
+    }
+    else {
+      $("#pass-req4").removeClass("pass-success");
+    }
+
+    if($(this).val().length > 0 && $(this).val() == $("#password2").val()){
+      $("#pass-req5").addClass("pass-success");
+    }
+    else {
+      $("#pass-req5").removeClass("pass-success");
+    }
+  });
+
+  $("#password2").on("keyup",function(){
+    if($(this).val().length > 0 && $(this).val() == $("#password").val()){
+      $("#pass-req5").addClass("pass-success");
+    }
+    else {
+      $("#pass-req5").removeClass("pass-success");
+    }
+  });
+
   $("#sigup-form").on("submit", function(e){
 
     var firstPassword = firstPasswordInput.value;
@@ -42,8 +89,6 @@ $(document).ready(function() {
     function checkRequirements() {
       if (firstPassword.length < 8) {
         firstInputIssuesTracker.add("fewer than 8 characters");
-      } else if (firstPassword.length > 100) {
-        firstInputIssuesTracker.add("greater than 100 characters");
       }
 
       if (!firstPassword.match(/\d/g)) {
@@ -73,7 +118,7 @@ $(document).ready(function() {
 
     if (firstInputIssues.length + secondInputIssues.length > 0) {
       return false;
-    } 
+    }
     var user = getFormData($(this).serializeArray());
     console.log(user);
     e.preventDefault();

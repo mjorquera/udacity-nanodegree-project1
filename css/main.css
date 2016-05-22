@@ -1,4 +1,4 @@
-﻿body {
+body {
   background-color: #F5F5F5; }
 
 .sign-up-wrapper {
@@ -45,16 +45,15 @@
   list-style: none;
   left: -15px;
   position: relative;
-  font-weight: bold; }
-
-.pass-success:before {
-  position: relative;
-  top: 1px;
-  display: inline-block;
-  font-style: normal;
-  font-weight: normal;
-  line-height: 1;
-  font-family: "Glyphicons Halflings";
-  content: "\e089";
-  left: -5px; }
-
+  font-weight: bold;
+  transition: all 0.2s ease; }
+  .pass-success:before {
+    position: relative;
+    top: 1px;
+    display: inline-block;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1;
+    font-family: "Glyphicons Halflings";
+    content: "\e089";
+    left: -5px; }

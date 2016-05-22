@@ -61,16 +61,20 @@ body {
     left: -15px;
     position: relative;
     font-weight: bold;
-}
-
-.pass-success:before{
-    position: relative;
-    top: 1px;
-    display: inline-block;
-    font-style: normal;
-    font-weight: normal;
-    line-height: 1;
-    font-family: "Glyphicons Halflings";
-    content: "\e089";
-    left: -5px;
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    -ms-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+    &:before{
+      position: relative;
+      top: 1px;
+      display: inline-block;
+      font-style: normal;
+      font-weight: normal;
+      line-height: 1;
+      font-family: "Glyphicons Halflings";
+      content: "\e089";
+      left: -5px;
+    }
 }
