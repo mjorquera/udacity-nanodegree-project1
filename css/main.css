@@ -6,6 +6,9 @@ body {
   border: #C5C5C5 1px solid;
   border-radius: 5px; }
 
+.color-green {
+  color: #50AB51; }
+
 .color-crimson {
   color: crimson; }
 
@@ -57,3 +60,8 @@ body {
     font-family: "Glyphicons Halflings";
     content: "\e089";
     left: -5px; }
+
+.trigger-collapse {
+  cursor: pointer; }
+  .trigger-collapse:hover {
+    background-color: #F5F5F5; }

@@ -10,6 +10,10 @@ body {
     border-radius: 5px;
 }
 
+.color-green{
+    color: #50AB51;
+}
+
 .color-crimson{
     color: crimson;
 }
@@ -61,10 +65,6 @@ body {
     left: -15px;
     position: relative;
     font-weight: bold;
-    -webkit-transition: all 0.2s ease;
-    -moz-transition: all 0.2s ease;
-    -ms-transition: all 0.2s ease;
-    -o-transition: all 0.2s ease;
     transition: all 0.2s ease;
     &:before{
       position: relative;
@@ -77,4 +77,11 @@ body {
       content: "\e089";
       left: -5px;
     }
+}
+
+.trigger-collapse{
+  cursor: pointer;
+  &:hover{
+    background-color: #F5F5F5;
+  }
 }

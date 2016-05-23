@@ -116,16 +116,19 @@ $(document).ready(function() {
     firstPasswordInput.setCustomValidity(firstInputIssues);
     secondPasswordInput.setCustomValidity(secondInputIssues);
 
-    if (firstInputIssues.length + secondInputIssues.length > 0) {
+    if ($("#sigup-form").checkValidity()) {
+      var user = getFormData($(this).serializeArray());
+      console.log(user);
+      e.preventDefault();
+      firebase.database().ref('users/').push(user);
+      notifySuccess();
+      $(this).trigger("reset");
+      return true;
+
+    } else {
       return false;
     }
-    var user = getFormData($(this).serializeArray());
-    console.log(user);
-    e.preventDefault();
-    firebase.database().ref('users/').push(user);
-    notifySuccess();
-    $(this).trigger("reset");
-    return true;
+
   });
 })
 

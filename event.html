@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Meet-Up Event Planner</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 col-sm-offset-1 col-sm-10 col-md-offset-2 col-md-8 sign-up-wrapper margin-top-3x padding-top">
+                <div class="row">
+                    <div class="col-xs-12 text-center">
+                        <h3>Event View <small>Meet-Up Event Planner</small>
+                        </h3>
+                    </div>
+                </div>
+                <hr/>
+                <div class="row trigger-collapse" data-toggle="collapse" href="#collapseEvent" aria-expanded="true" aria-controls="collapseEvent">
+                    <div class="col-xs-10">
+                        <h4>Create New Event</h4>
+                    </div>
+                    <div class="col-xs-2 color-green">
+                        <h4><span class="glyphicon glyphicon-plus"></span></h4>
+                    </div>
+                </div>
+                <div id="collapseEvent" class="row collapse margin-top">
+                  <div class="col-sm-12">
+                    <div class="row">
+                      <div class="col-sm-12">
+                        <div class="form-group required">
+                            <label class="control-label" for="event-name">Name</label>
+                            <input class="form-control" type="text" id="event-name" name="event-name" placeholder="Mario's Birthday Party!" required/>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-sm-6">
+                          <div class="form-group required">
+                              <label class="control-label" for="event-type">Type</label>
+                              <input class="form-control" type="text" id="event-type" name="event-type" placeholder="Birthday" required/>
+                          </div>
+                      </div>
+                      <div class="col-sm-6">
+                          <div class="form-group required">
+                              <label class="control-label" for="event-host">Host</label>
+                              <input class="form-control" type="text" id="event-host" name="event-host" placeholder="My company" required/>
+                          </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-sm-6">
+                          <div class="form-group required">
+                              <label class="control-label" for="event-start">Start</label>
+                              <input class="form-control" type="datetime-local" id="event-start" name="event-start" required/>
+                          </div>
+                      </div>
+                      <div class="col-sm-6">
+                          <div class="form-group required">
+                              <label class="control-label" for="event-end">End</label>
+                              <input class="form-control" type="datetime-local" id="event-end" name="event-end" required/>
+                          </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-sm-6">
+                          <div class="form-group required">
+                              <label class="control-label" for="event-guests">Guests</label>
+                              <input class="form-control" type="text" id="event-guests" name="event-guests" required/>
+                          </div>
+                      </div>
+                      <div class="col-sm-6">
+                          <div class="form-group required">
+                              <label class="control-label" for="event-location">Location</label>
+                              <input class="form-control" type="text" id="event-location" name="event-location" required/>
+                          </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-sm-12">
+                          <div class="form-group">
+                              <label class="control-label" for="event-message">Message</label>
+                              <textarea class="form-control" type="text" id="event-message" name="event-message"> </textarea>
+                          </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <hr/>
+                <h4>Events</h4>
+
+
+            <hr />
+            <p>
+                <small><span class="color-crimson">*</span> Indicates a required field.</small>
+            </p>
+        </div>
+      </div>
+
+    </div>
+
+      <script src="https://www.gstatic.com/firebasejs/live/3.0/firebase.js"></script>
+      <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyD7obYQibEcGcNu7W7RE9BT4ymHg0NZOxc",
+        authDomain: "meet-up-7f6be.firebaseapp.com",
+        databaseURL: "https://meet-up-7f6be.firebaseio.com",
+        storageBucket: "",
+      };
+      firebase.initializeApp(config);
+      </script>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="js/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap-notify.js"></script>
+    <script src="js/main.js"></script>
+
+  </body>
+</html>
