@@ -3,6 +3,10 @@
 
 ## 2. Usage
 
+### Login
 
-udacity-nanodegree-project1
+You can use any login email and password, this is just the start, to enter the event page.
 
+### Sign Up
+
+### Events

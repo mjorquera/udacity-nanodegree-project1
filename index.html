@@ -22,7 +22,7 @@
     <div class="container">
         <div class="row">
             <div class="col-xs-12 col-sm-offset-3 col-sm-6 col-md-offset-4 col-md-4 sign-up-wrapper margin-top-3x padding-top">
-                <form action="/event.html" method="post">
+                <form id="login-form">
                     <div class="row">
                         <div class="col-xs-12 text-center">
                             <h3>Sign In <small>Meet-Up Event Planner</small></h3>
@@ -32,8 +32,8 @@
                     <div class="row">
                         <div class="col-sm-12">
                             <div class="form-group">
-                                <label class="control-label" for="username">Username</label>
-                                <input class="form-control" type="text" id="username" autocomplete="username" placeholder="Username" autofocus required />
+                                <label class="control-label" for="email">Email</label>
+                                <input class="form-control" type="email" id="email" placeholder="john.doe@mail.com" autofocus required />
                             </div>
                         </div>
                     </div>
@@ -41,7 +41,7 @@
                         <div class="col-sm-12">
                             <div class="form-group">
                                 <label class="control-label" for="password">Password</label>
-                                <input class="form-control" type="password" id="password" autocomplete="current-password" placeholder="********" required />
+                                <input class="form-control" type="password" id="password" placeholder="********" required />
                             </div>
                         </div>
                     </div>
@@ -59,9 +59,21 @@
 
     </div>
 
+    <script src="https://www.gstatic.com/firebasejs/live/3.0/firebase.js"></script>
+    <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyD7obYQibEcGcNu7W7RE9BT4ymHg0NZOxc",
+      authDomain: "meet-up-7f6be.firebaseapp.com",
+      databaseURL: "https://meet-up-7f6be.firebaseio.com",
+      storageBucket: "",
+    };
+    firebase.initializeApp(config);
+    </script>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/login.js"></script>
 </body>
 </html>
