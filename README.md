@@ -18,7 +18,7 @@ $ gulp
 ```
 
 ### Browse to the Project
-Open a web browser and go to http://localhost:3000
+Open a web browser and go to [http://localhost:3000](http://localhost:3000)
 
 ## 2. Usage
 
