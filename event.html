@@ -40,79 +40,99 @@
                 </div>
                 <div id="collapseEvent" class="row collapse margin-top">
                   <div class="col-sm-12">
-                    <div class="row">
-                      <div class="col-sm-12">
-                        <div class="form-group required">
-                            <label class="control-label" for="event-name">Name</label>
-                            <input class="form-control" type="text" id="event-name" name="event-name" placeholder="Mario's Birthday Party!" required/>
+                    <form id="event-form">
+                      <div class="row">
+                        <div class="col-sm-12">
+                          <div class="form-group required">
+                              <label class="control-label" for="event-name">Name</label>
+                              <input class="form-control" type="text" id="event-name" name="event-name" placeholder="Mario's Birthday Party!" required/>
+                          </div>
                         </div>
                       </div>
-                    </div>
-                    <div class="row">
-                      <div class="col-sm-6">
-                          <div class="form-group required">
-                              <label class="control-label" for="event-type">Type</label>
-                              <input class="form-control" type="text" id="event-type" name="event-type" placeholder="Birthday" required/>
-                          </div>
+                      <div class="row">
+                        <div class="col-sm-6">
+                            <div class="form-group required">
+                                <label class="control-label" for="event-type">Type</label>
+                                <input class="form-control" type="text" id="event-type" name="event-type" placeholder="Birthday" required/>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group required">
+                                <label class="control-label" for="event-host">Host</label>
+                                <input class="form-control" type="text" id="event-host" name="event-host" placeholder="My company" required/>
+                            </div>
+                        </div>
                       </div>
-                      <div class="col-sm-6">
-                          <div class="form-group required">
-                              <label class="control-label" for="event-host">Host</label>
-                              <input class="form-control" type="text" id="event-host" name="event-host" placeholder="My company" required/>
-                          </div>
+                      <div class="row">
+                        <div class="col-sm-6">
+                            <div class="form-group required">
+                                <label class="control-label" for="event-start">Start</label>
+                                <input class="form-control" type="datetime-local" id="event-start" name="event-start" required/>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group required">
+                                <label class="control-label" for="event-end">End</label>
+                                <input class="form-control" type="datetime-local" id="event-end" name="event-end" required/>
+                            </div>
+                        </div>
                       </div>
-                    </div>
-                    <div class="row">
-                      <div class="col-sm-6">
-                          <div class="form-group required">
-                              <label class="control-label" for="event-start">Start</label>
-                              <input class="form-control" type="datetime-local" id="event-start" name="event-start" required/>
-                          </div>
+                      <div class="row">
+                        <div class="col-sm-6">
+                            <div class="form-group required">
+                                <label class="control-label" for="event-guests">Guests</label>
+                                <input class="form-control" type="text" id="event-guests" name="event-guests" required/>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group required">
+                                <label class="control-label" for="event-location">Location</label>
+                                <input class="form-control" type="text" id="event-location" name="event-location" required/>
+                            </div>
+                        </div>
                       </div>
-                      <div class="col-sm-6">
-                          <div class="form-group required">
-                              <label class="control-label" for="event-end">End</label>
-                              <input class="form-control" type="datetime-local" id="event-end" name="event-end" required/>
-                          </div>
+                      <div class="row">
+                        <div class="col-sm-12">
+                            <div class="form-group">
+                                <label class="control-label" for="event-message">Message</label>
+                                <textarea class="form-control" type="text" id="event-message" name="event-message"> </textarea>
+                            </div>
+                        </div>
                       </div>
-                    </div>
-                    <div class="row">
-                      <div class="col-sm-6">
-                          <div class="form-group required">
-                              <label class="control-label" for="event-guests">Guests</label>
-                              <input class="form-control" type="text" id="event-guests" name="event-guests" required/>
-                          </div>
+                      <div class="row">
+                        <div class="col-sm-12 text-center">
+                          <button type="submit" class="btn btn-primary">Create Event</button>
+                          <p class="margin-top text-left">
+                            <small><span class="color-crimson">*</span> Indicates a required field.</small>
+                          </p>
+                        </div>
                       </div>
-                      <div class="col-sm-6">
-                          <div class="form-group required">
-                              <label class="control-label" for="event-location">Location</label>
-                              <input class="form-control" type="text" id="event-location" name="event-location" required/>
-                          </div>
-                      </div>
-                    </div>
-                    <div class="row">
-                      <div class="col-sm-12">
-                          <div class="form-group">
-                              <label class="control-label" for="event-message">Message</label>
-                              <textarea class="form-control" type="text" id="event-message" name="event-message"> </textarea>
-                          </div>
-                      </div>
-                    </div>
-                    <div class="row">
-                      <div class="col-sm-12 text-center">
-                        <button type="submit" class="btn btn-primary">Create Event</button>
-                      </div>
-                    </div>
+                  </form>
                   </div>
                 </div>
                 <hr/>
                 <h4>Events</h4>
-
-
-            <hr />
-            <p>
-                <small><span class="color-crimson">*</span> Indicates a required field.</small>
-            </p>
+                <div class="row padding-bottom display-event">
+                  <div class="col-xs-4 text-center">
+                      <h1>31</h1>
+                      <h5>January</h5>
+                  </div>
+                  <div class="col-xs-8 border-left">
+                      <h5>Mario's Birthday Party</h5>
+                      <p>
+                        <small>start: 12 January 2016 12:00 - ends: 12 January 2016 17:00</small>
+                      </p>
+                      <p>
+                        Host by: Mario
+                      </p>
+                      <p>
+                        Location: Mario's House
+                      </p>
+                      <p>
+                        Lorem ipsum as asjd idem tere ka malama Lorem ipsum as asjd idem tere ka malamaLorem ipsum as asjd idem tere ka malamaLorem ipsum as asjd idem tere ka malamaLorem ipsum as asjd idem tere ka malamaLorem ipsum as asjd idem tere ka malama
+                      </p>
+                  </div>
+                </div>
         </div>
       </div>
 
@@ -134,7 +154,7 @@
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
     <script src="js/bootstrap-notify.js"></script>
-    <script src="js/main.js"></script>
+    <script src="js/event.js"></script>
 
   </body>
 </html>
