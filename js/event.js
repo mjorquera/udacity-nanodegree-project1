@@ -27,19 +27,25 @@ $(document).ready(function() {
         return indexed_array;
       }
 
-  function refreshEvents(){
-      return true;
-  }
-
-  $("#event-form").on("submit", function(e){
-    debugger;
+  $("#event_form").on("submit", function(e){
     var event = getFormData($(this).serializeArray());
     console.log(event);
     e.preventDefault();
     firebase.database().ref('events/').push(event);
     notifySuccess();
     $(this).trigger("reset");
-    refreshEvents();
     return true;
   });
-})
+
+  var eventViewModel = new EventViewModel();
+
+  firebase.database().ref('events/').orderByChild('event_start').on('child_added', function(data){
+    eventViewModel.event.push(data.val());
+  });
+
+  ko.applyBindings(eventViewModel);
+});
+
+var EventViewModel = function(){
+  this.event = ko.observableArray();
+}
