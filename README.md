@@ -28,4 +28,10 @@ You can use any login email and password, this is just the start, to enter the e
 
 ### Sign Up
 
+This form validate all the inputs, but there is no data storage.
+
 ### Events
+
+All the events are displayed in the page, when an event is entered the data is updated, there is no need to refresh the page.
+
+For showing the events i used knockout.js and firebase to storage.

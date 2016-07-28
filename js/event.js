@@ -29,7 +29,6 @@ $(document).ready(function() {
 
   $("#event_form").on("submit", function(e){
     var event = getFormData($(this).serializeArray());
-    console.log(event);
     e.preventDefault();
     firebase.database().ref('events/').push(event);
     notifySuccess();

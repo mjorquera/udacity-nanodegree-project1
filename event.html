@@ -53,8 +53,17 @@
                       <div class="row">
                         <div class="col-sm-6">
                             <div class="form-group required">
-                                <label class="control-label" for="event_type">Type</label>
-                                <input class="form-control" type="text" id="event_type" name="event_type" placeholder="Birthday" required/>
+                                <label class="control-label" for="event_type">Event Type</label>
+                                <input class="form-control" list="event_type" name="event_type" placeholder="Birthday" required/>
+                                <datalist id="event_type">
+                                  <option value="Birthday">
+                                  <option value="Party">
+                                  <option value="Aniversary">
+                                  <option value="Graduation">
+                                  <option value="Weding">
+                                  <option value="Meeting">
+                                  <option value="Conference">
+                                </datalist>
                             </div>
                         </div>
                         <div class="col-sm-6">
@@ -120,7 +129,14 @@
                         <h5 data-bind="text: moment(event_start).format('MMMM')"></h5>
                     </div>
                     <div class="col-xs-10 border-left">
-                        <h5 data-bind="text: event_name"></h5>
+                        <div class="row">
+                          <div class="col-xs-8">
+                            <h5 data-bind="text: event_name"></h5>
+                          </div>
+                          <div class="col-xs-4 text-rigth">
+                            <h5><small data-bind="text: event_type"></small></h5>
+                          </div>
+                        </div>
                         <hr />
                         <p>
                           <small><i class="fa fa-clock-o"></i> <span data-bind="text: moment(event_start).format('YYYY-MM-DD HH:mm')"></span> to <span data-bind="text: moment(event_end).format('YYYY-MM-DD HH:mm')"></span></small>
