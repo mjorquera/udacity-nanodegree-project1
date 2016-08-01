@@ -22,11 +22,9 @@
   },
   "homepage": "https://github.com/mjorquera/udacity-nanodegree-project1#readme",
   "devDependencies": {
+    "browser-sync": "^2.14.0",
     "gulp": "^3.9.1",
-    "gulp-sass": "^2.3.2"
-  },
-  "dependencies": {
-    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.0",
     "gulp-sass": "^2.3.2"
   }
 }
