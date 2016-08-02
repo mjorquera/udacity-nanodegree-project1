@@ -1,5 +1,19 @@
 $(document).ready(function() {
 
+  var inputs = document.getElementsByTagName("input");
+  var inputs_len = inputs.length;
+  var addDirtyClass = function(evt) {
+    evt.srcElement.classList.toggle("dirty", true);
+  };
+  for (var i = 0; i < inputs_len; i++) {
+    var input = inputs[i];
+    if (input.id !== "password" && input.id !== "password2") {
+      input.addEventListener("blur", addDirtyClass);
+      input.addEventListener("invalid", addDirtyClass);
+      input.addEventListener("valid", addDirtyClass);
+    }
+  }
+
   var firstPasswordInput = document.querySelector("#password");
   var secondPasswordInput = document.querySelector("#password2");
   var submit = document.querySelector("#submitSignUp");

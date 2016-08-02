@@ -72,3 +72,9 @@ body {
 .display-event {
   margin: 3px 0px;
   border-bottom: 1px solid DarkGray; }
+
+input.dirty:not(:focus):invalid {
+  background-color: #FFD9D9; }
+
+input.dirty:not(:focus):valid {
+  background-color: #D9FFD9; }

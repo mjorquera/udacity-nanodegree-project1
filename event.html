@@ -11,7 +11,7 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/animate.css" rel="stylesheet">
     <link href="css/font-awesome.min.css" rel="stylesheet">
-    <link href="css/main.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.min.css">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -46,15 +46,15 @@
                         <div class="col-sm-12">
                           <div class="form-group required">
                               <label class="control-label" for="event_name">Name</label>
-                              <input class="form-control" type="text" id="event_name" name="event_name" placeholder="Mario's Birthday Party!" required/>
+                              <input class="form-control" type="text" id="event_name" name="event_name" placeholder="Mario's Birthday Party!" autofocus required/>
                           </div>
                         </div>
                       </div>
                       <div class="row">
                         <div class="col-sm-6">
                             <div class="form-group required">
-                                <label class="control-label" for="event_type">Event Type</label>
-                                <input class="form-control" list="event_type" name="event_type" placeholder="Birthday" required/>
+                                <label class="control-label">Event Type
+                                <input class="form-control" list="event_type" name="event_type" placeholder="Birthday" required/></label>
                                 <datalist id="event_type">
                                   <option value="Birthday">
                                   <option value="Party">
@@ -176,7 +176,7 @@
     <script src="js/bootstrap-notify.js"></script>
     <script type="text/javascript" src="js/knockout-3.4.0.js"></script>
     <script type="text/javascript" src="js/moment.min.js"></script>
-    <script src="js/event.js"></script>
+    <script src="js/event.min.js"></script>
 
   </body>
 </html>
